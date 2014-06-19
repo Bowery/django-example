@@ -56,9 +56,7 @@ WSGI_APPLICATION = 'web.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 db_addr = os.getenv("DATABASE_PORT_5432_ADDR")
-try:
-  db_addr
-except NameError:
+if (db_addr is None) or (len(db_addr) == 0):
   db_host = "localhost"
   db_port = 5432
 else:

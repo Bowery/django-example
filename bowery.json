@@ -12,6 +12,6 @@
     "image": "django",
     "path": "web",
     "start": "python manage.py runserver 0.0.0.0:80 --noreload",
-    "build": "python manage.py syncdb"
+    "build": "python manage.py syncdb --noinput"
   }
 }
