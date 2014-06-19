@@ -1,0 +1,17 @@
+{
+  "cache": {
+    "image": "redis"
+  },
+  "database": {
+    "image": "postgresql",
+    "ports": [
+      5432
+    ]
+  },
+  "web": {
+    "image": "django",
+    "path": "web",
+    "start": "python manage.py runserver 0.0.0.0:80 --noreload",
+    "build": "python manage.py syncdb"
+  }
+}
